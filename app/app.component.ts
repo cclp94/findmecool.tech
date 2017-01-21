@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent  {
   name = 'Find Me Cool...';
 
-  getSearchInput(searchInput: any) : String {
-    return searchInput.value;
+  getSearchInput(searchInput: String){
+    console.log("searchInput.value: " + searchInput);
   }
 }
