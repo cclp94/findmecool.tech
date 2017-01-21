@@ -8,6 +8,10 @@
         <div class="row">
             <div class="col-lg-6 text-center">
                 <h1>{{name}}</h1>
+                <form>
+                  <input #searchInput placeholder="Search..." (keyup.enter)="getSearchInput(searchInput.value); searchInput.value=''">
+                  <button (click)="getSearchInput(searchInput.value); searchInput.value=''">Search</button>
+                </form>
             </div>
         </div>
     </div>
