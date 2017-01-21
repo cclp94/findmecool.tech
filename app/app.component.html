@@ -1,16 +1,17 @@
 <section id="main">
     <div class="container">
+
         <div class="row">
-            <button class="askYP" (click)="askYP()">
-            Ask Yellow Pages
-            </button>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 text-center">
+            <div class="col-lg-12 text-center">
                 <h1>{{name}}</h1>
                   <input #searchInput placeholder="Search..." (keyup.enter)="getSearchInput(searchInput.value); searchInput.value=''">
                   <button (click)="getSearchInput(searchInput.value); searchInput.value=''">Search</button>
             </div>
+        </div>
+        <div class="row">
+            <button class="askYP" (click)="askYP()">
+            Ask Yellow Pages
+            </button>
         </div>
     </div>
 </section>
