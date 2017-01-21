@@ -20,5 +20,12 @@ button.askYP{
   margin-top: -2px;
   margin-right: .8em;
   /*background-color: #607D8B !important;*/
-  color:black;
+  color:#fff200;
+}
+.btn-default{
+  transition: 0.1s;
+}
+
+.btn-default:hover{
+  background-color:#fff200;
 }
