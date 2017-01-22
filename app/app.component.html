@@ -1,28 +1,15 @@
-<section id="head">
-<!DOCTYPE html>
-<html lang="en">
-</html>
-
-<section id="main">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1>{{name}}</h1>
-            </div>
-        </div>
-    </div>
-</section>
 <section id="main-search">
   <div class="container">
         <div class="row">
-            <div id="search" class="col-lg-10">
-              <div class="inner-addon left-addon">
-                <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
-                <input #searchInput type="text" class="searchBar form-control" placeholder="Search..." (keyup.enter)="getSearchInput(searchInput.value); searchInput.value=''">
-              </div>
+            <div class="col-lg-4 text-left title">
+              <h1>{{name}}</h1>
             </div>
-            <div class="col-lg-2">       
-                <button class="askYP, btn btn-default"(click)="askYP()"><img class="yellowLogo" src="{{ypLogo}}"/> Ask Yellow Pages</button>
+            <div id="search" class="col-lg-6 searchBar">
+            
+                <input #searchInput type="text" class="form-control" placeholder="Search for stuff..." (keyup.enter)="getSearchInput(searchInput.value); searchInput.value=''">
+            </div>
+            <div *ngIf="hasSearched" class="col-lg-2 ypButton ">       
+                <button class="askYP, btn btn-default"(click)="askYP()"><img class="yellowLogo" src="{{ypLogo}}"/> Stores Near Me</button>
             </div>
         </div>
     </div>
