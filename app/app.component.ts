@@ -10,12 +10,18 @@ import { FeedComponent } from './feed.component';
 export class AppComponent  {
 
   searchValue: string;
+  hasSearched: boolean;
   askValue: string;
-  name = 'Find Me Cool...';
+  name = 'Find Me Cool';
+  ypLogo = 'app/img/YPLogo.png';
 
+  constructor(){
+      this.hasSearched = false;
+  }
   //gets input from search field
   getSearchInput(searchInput: string){
       this.searchValue = searchInput;
+      this.hasSearched = true;
   }
 
   //button "ask yellow pages" was clicked. grab search field result, aggregates hashtag.

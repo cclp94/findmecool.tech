@@ -1,33 +1,98 @@
-html,body{
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+html,
+body{
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
 
-h1,
-h2,
+h1{
+  font-family: 'Pacifico', cursive;
+  font-size: 48px;
+}
+h2{
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+}
 h3,
 h4,
 h5,
 h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
-section {
-  padding: 50px 0;
-  text-align: center;
+.title{
+  left: -30px;
+}
+
+input[type="text"] {
+  margin: 0;
+  width: 100%;
+  border: 0px solid #000000;
+  border-bottom-width: 1px;
+  background: transparent;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
 }
 
 button.askYP{
   float:left;
   margin-top: -2px;
-  margin-right: .8em;
-  /*background-color: #607D8B !important;*/
-  color:#fff200;
+  margin-right: .8em; 
 }
+
 .btn-default{
-  transition: 0.1s;
+  border-style: black;
+  border-width: 2px;
+  border-radius: 10px;
+  transition: 0.3s;
+  font-size: 18px;
 }
 
 .btn-default:hover{
   background-color:#fff200;
+}
+
+.ypButton{
+  padding-top: 30px;
+}
+/*
+/* enable absolute positioning 
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon 
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon 
+.left-addon .glyphicon { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }*/
+
+.yellowLogo{
+  padding-right: 5px;
+}
+
+.searchBar{
+  padding-top: 38px;
+  left: -70px; 
 }
 
 footer {
