@@ -7,12 +7,21 @@ import {Observable} from 'rxjs/Rx';
 export class SubscriptionService{
 
     constructor (private http: Http) {}
+
+    // Call python Backend
     getTopTweets() : Promise<any[]>{
         return this.http.get("https://api.twitter.com/1.1/search/tweets.json?q=&geocode=-22.912214,-43.230182,1km&lang=pt&result_type=recent")
                     .toPromise()
                     .then(this.extractData)
                     .catch(this.handleError);
         //return Promise.resolve([{"tweet":{"text": "hello"}}, {"tweet":{"text": "world"}}]);
+    }
+
+    searchTweets(searchValue : string){
+        return this.http.get("https://api.twitter.com/1.1/search/tweets.json?q=&geocode=-22.912214,-43.230182,1km&lang=pt&result_type=recent")
+                    .toPromise()
+                    .then(this.extractData)
+                    .catch(this.handleError);
     }
 
     private extractData(res: Response) {
