@@ -27,10 +27,10 @@ export class FeedComponent  implements OnInit{
 
     constructor(private subsService: SubscriptionService) { 
         this.tweets = [];
-    //     setInterval(() => {
-    //         this.getTopTweets()
-    //         console.log("Called");
-    // }, 1000);
+        setInterval(() => {
+            this.getTopTweets()
+            console.log("Called");
+    }, 1000);
     }
 
     private newTweet(data: Object) {

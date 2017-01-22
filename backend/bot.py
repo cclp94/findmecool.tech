@@ -1,4 +1,5 @@
 import tweepy
+import json
 from secrets import *
 
 # Consumer keys and access tokens, used for OAuth
@@ -27,12 +28,8 @@ def parseForYP():
         count+=1
         return t2
 
-def parseTwitter(query):
-    for t in tweepy.Cursor(api.search, q=query).items(4):
-        t["statuses"]
-
-
-
-
-i = input("input")
-parseTwitter(i)
+def queryTopTrend():
+    searched_tweets = [status._json for status in tweepy.Cursor(api.search,  q="hello").items(20)]
+    json_strings = [json.dumps(json_obj["text"]) for json_obj in searched_tweets]  
+    print(json_strings)
+    return str(json_strings)
