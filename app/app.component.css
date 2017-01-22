@@ -11,7 +11,7 @@ h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 section {
-  padding: 10px 0;
+  padding: 50px 0;
   text-align: center;
 }
 
@@ -30,7 +30,7 @@ button.askYP{
   background-color:#fff200;
 }
 
-.footer {
+footer {
   position: absolute;
   right: 0;
   bottom: 0;
