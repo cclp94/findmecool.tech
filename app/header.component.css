@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 header{
     width: 100%;
@@ -7,7 +7,7 @@ header{
 
 #logo{
     height: 100%;
-    background-color: #EC971F;
+    /*background-color: #8dcca3;*/
 }
 
 #logo img{
@@ -15,5 +15,6 @@ header{
 }
 
 #logoText{
-    font-family: 'Lobster', cursive;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
 }

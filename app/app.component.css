@@ -1,8 +1,15 @@
-html,body{
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+html,
+body{
+  background-image: "img/background.jpg";
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
 
-h1,
+h1{
+  font-family: 'Pacifico', cursive;
+  font-size: 48px;
+}
 h2,
 h3,
 h4,
@@ -15,19 +22,78 @@ section {
   text-align: center;
 }
 
+input[type="text"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  border: 0px;
+  background: transparent;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
+}
+
+.search input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 5px #c9c9c9;
+  transition: border 0.3s;
+}
+.search input[type="text"]:focus,
+.search input[type="text"].focus {
+  border-bottom: solid 3px #969696;
+}
+
 button.askYP{
   float:left;
   margin-top: -2px;
-  margin-right: .8em;
-  /*background-color: #607D8B !important;*/
-  color:#fff200;
+  margin-right: .8em; 
 }
+
 .btn-default{
-  transition: 0.1s;
+  border-style: black;
+  border-width: 2px;
+  border-radius: 10px;
+  transition: 0.3s;
+  font-size: 18px;
 }
 
 .btn-default:hover{
   background-color:#fff200;
+}
+
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.yellowLogo{
+  padding-right: 5px;
 }
 
 footer {

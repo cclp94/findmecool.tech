@@ -1,3 +1,4 @@
+<section id="head">
 <!DOCTYPE html>
 <html lang="en">
 </html>
@@ -5,15 +6,23 @@
 <section id="main">
     <div class="container">
         <div class="row">
-            <button class="askYP, btn btn-default" (click)="askYP()">
-            Ask Yellow Pages
-            </button>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 text-center">
+            <div class="col-lg-12 text-center">
                 <h1>{{name}}</h1>
-                  <input #searchInput type="text" class="form-control" placeholder="Search..." (keyup.enter)="getSearchInput(searchInput.value); searchInput.value=''">
-                  <button class="btn btn-warning" (click)="getSearchInput(searchInput.value); searchInput.value=''">Search</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="main-search">
+  <div class="container">
+        <div class="row">
+            <div id="search" class="col-lg-10">
+              <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-search" aria-hidden="true"></i>
+                <input #searchInput type="text" class="searchBar form-control" placeholder="Search..." (keyup.enter)="getSearchInput(searchInput.value); searchInput.value=''">
+              </div>
+            </div>
+            <div class="col-lg-2">       
+                <button class="askYP, btn btn-default"(click)="askYP()"><img class="yellowLogo" src="{{ypLogo}}"/> Ask Yellow Pages</button>
             </div>
         </div>
     </div>
