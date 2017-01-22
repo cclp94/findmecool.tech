@@ -1,4 +1,4 @@
-
+import socket
 #Import the necessary methods from tweepy library
 import argparse
 
@@ -10,9 +10,19 @@ from secrets import *
 
 import json
 
+UDP_IP = "127.0.0.1"
+UDP_PORT = 5000
+
 positives = 0
 negatives = 0
 neutrals = 0
+
+class Socket:
+
+    sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)#UDP
+        #global positives #need this?
+    sock.sendto(str.encode("{'positives':"+str(positives)+", 'negatives':"+str(negatives)+", 'neutrals':"+str(neutrals)+"}"),(UDP_IP,UDP_PORT))
+
 #This is a basic listener that just prints received tweets to stdout.
 class StdOutListener(StreamListener):
 
@@ -64,6 +74,7 @@ if __name__ == '__main__':
     auth = OAuthHandler(C_KEY, C_SECRET)
     auth.set_access_token(A_TOKEN, A_TOKEN_SECRET)
     stream = Stream(auth, l)
-
+    
     #This line filter Twitter Streams to capture data by the keywords: 'python', 'javascript', 'ruby'
     stream.filter(track=['Trump'])
+    Socket()

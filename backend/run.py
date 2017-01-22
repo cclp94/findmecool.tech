@@ -1,3 +1,5 @@
+import socket,os
+import sys
 from datetime import timedelta
 from flask import make_response, request, current_app
 from functools import update_wrapper
@@ -5,6 +7,8 @@ from flask import Flask
 from bot import queryTopTrend
 app = Flask(__name__)
 
+UDP_PORT = 5000
+UDP_IP = "127.0.0.1"
 def crossdomain(origin=None, methods=None, headers=None,
                 max_age=21600, attach_to_all=True,
                 automatic_options=True):
@@ -53,7 +57,31 @@ def crossdomain(origin=None, methods=None, headers=None,
 def test():
     return queryTopTrend()
 
+class Socket:
+    #udp socket
+    msg = ""
+    try:
+        sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)#UDP
+        print("socket created")
+    except:
+        print ("Failed to create socket")
+        sys.exit()
+    # Bind socket to local host and port
+    try:
+        sock.bind((UDP_IP, UDP_PORT))
+    except:
+        print ("Bind failed")
+        sys.exit()
+         
+    print ('Socket bind complete')   
+
+    while True:
+        data, addr = sock.recvfrom(1024)
+        print ("received message: ", data)
+
+    sock.close()
+
 if __name__ == '__main__':
     app.run()
-
+    Socket()
 
