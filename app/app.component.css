@@ -95,3 +95,23 @@ button.askYP{
 .yellowLogo{
   padding-right: 5px;
 }
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+  height: 50px;
+}
+
+.alignLeft {
+  float: left;
+  padding: 4px;
+}
+
+.alignRight {
+  float: right;
+}

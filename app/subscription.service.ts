@@ -10,7 +10,7 @@ export class SubscriptionService{
 
     // Call python Backend
     getTopTweets() : Promise<any[]>{
-        return this.http.get("https://api.twitter.com/1.1/search/tweets.json?q=&geocode=-22.912214,-43.230182,1km&lang=pt&result_type=recent")
+        return this.http.get("http://127.0.0.1:5000/test")
                     .toPromise()
                     .then(this.extractData)
                     .catch(this.handleError);
@@ -18,7 +18,7 @@ export class SubscriptionService{
     }
 
     searchTweets(searchValue : string){
-        return this.http.get("https://api.twitter.com/1.1/search/tweets.json?q=&geocode=-22.912214,-43.230182,1km&lang=pt&result_type=recent")
+        return this.http.get("http://127.0.0.1:5000/test")
                     .toPromise()
                     .then(this.extractData)
                     .catch(this.handleError);
