@@ -11,8 +11,8 @@ export class AppComponent  {
 
   searchValue: string;
   askValue: string;
-  name = 'Find Me Cool...';
-
+  name = 'Find Me Cool';
+  ypLogo = 'app/img/YPLogo.png';
   //gets input from search field
   getSearchInput(searchInput: string){
       this.searchValue = searchInput;
